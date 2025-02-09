@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <img src="/src//main/resources/static/img/logo.png">
-        <form action="/usuarios/login" method="post">
+        <form id="login-form">
             <input placeholder="Email" type="email" id="email" name="email" required>
         
             <input placeholder="Senha" type="password" id="senha" name="senha" required>
@@ -21,5 +21,30 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const response = await fetch('http://127.0.0.1:8080/usuarios/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, senha })
+            });
+
+            if (response.ok) {
+                // Redirecionar ou tratar o sucesso
+                window.location.href = '/src/main/resources/static/index/index.html';
+            } else {
+                // Tratar erro de login
+                alert('Credenciais inválidas');
+            }
+        });
+    </script>
 </body>
 </html>
