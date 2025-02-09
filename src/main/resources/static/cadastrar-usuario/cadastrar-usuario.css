@@ -66,37 +66,22 @@ button:hover {
     background-color: #1f6986;
 }
 
-.forgot-password {
+.forgot-password, .login-link {
     margin-top: 10px;
 }
 
-.forgot-password a {
+.forgot-password a, .login-link a {
     color: #044964;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
-.forgot-password a:hover {
+
+.forgot-password a:hover, .login-link a:hover {
     color: #94ba65;
 }
 
-.criar-usuario {
-    margin-top: 10px;
-}
-
-.criar-usuario a {
-    color: #044964;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-.criar-usuario a:hover {
-    color: #94ba65;
-}
-
-
-
-img{
+img {
     width: 300px;
     margin-bottom: 30px;
 }

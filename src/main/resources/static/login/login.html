@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="/src//main/resources/static/img/logo.png">
+        <img src="/src/main/resources/assets/img/logo.png">
         <form id="login-form">
             <input placeholder="Email" type="email" id="email" name="email" required>
         
@@ -19,12 +19,16 @@
             <div class="forgot-password">
                 <a href="/esqueci-senha">Esqueceu a senha?</a>
             </div>
+            <div class="criar-usuario">
+                <a>Não tem uma conta?</a>
+                <a href="/src/main/resources/static/cadastrar-usuario/cadastrar-usuario.html" class="registro"> Registre-se</a>
+            </div>
         </form>
     </div>
 
     <script>
         document.getElementById('login-form').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault(); 
 
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;
@@ -38,10 +42,8 @@
             });
 
             if (response.ok) {
-                // Redirecionar ou tratar o sucesso
                 window.location.href = '/src/main/resources/static/index/index.html';
             } else {
-                // Tratar erro de login
                 alert('Credenciais inválidas');
             }
         });
