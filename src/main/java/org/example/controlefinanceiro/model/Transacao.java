@@ -3,6 +3,7 @@ package org.example.controlefinanceiro.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "transacao")
 public class Transacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

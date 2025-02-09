@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.example.controlefinanceiro.model.Usuario;
 
 @Entity
+@Table(name = "meta_financeira")
 public class MetaFinanceira {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
