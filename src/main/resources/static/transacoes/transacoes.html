@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="./transacoes.css">
+    <script src="./transacoes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Controle Financeiro</title>
@@ -37,7 +38,57 @@
     </div>
 
     <div class="content">
-        <p>Lista de Transacoes!</p>
+        <table>
+            <thead>
+              <tr>
+                <th>ID Transação</th>
+                <th>ID Usuário</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>ID Categoria</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>101</td>
+                <td>Receita</td>
+                <td>R$ 500,00</td>
+                <td>2025-02-11</td>
+                <td>5</td>
+                <td>
+                    <button onclick="editarTransacao(1)" class="action-button">
+                      <i class="fas fa-pencil-alt"></i> Editar
+                    </button>
+                    <button onclick="excluirTransacao(1)" class="action-button">
+                      <i class="fas fa-trash"></i> Excluir
+                    </button>
+                  </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>102</td>
+                <td>Despesa</td>
+                <td>R$ 200,00</td>
+                <td>2025-02-10</td>
+                <td>3</td>
+                <td>
+                    <button onclick="editarTransacao(1)" class="action-button">
+                      <i class="fas fa-pencil-alt"></i> Editar
+                    </button>
+                    <button onclick="excluirTransacao(1)" class="action-button">
+                      <i class="fas fa-trash"></i> Excluir
+                    </button>
+                  </td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+          <button onclick="cadastrarTransacao()" class="action-button" id="cadastroButton"
+          <i class="fas fa-plus"></i>Cadastrar</button>
     </div>
 
     <script>
